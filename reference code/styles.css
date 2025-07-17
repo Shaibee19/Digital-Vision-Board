@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap");
 
-/* BASE */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
   min-height: 100vh;
 }
 
-/* HEADER */
+/* Header Styles - SKIP */
 header {
   display: flex;
   justify-content: space-between;
@@ -36,14 +35,28 @@ header {
   margin-right: 10px;
 }
 
-.search__container {
+.date-display {
+  text-align: right;
+}
+
+.day {
+  font-weight: bold;
+}
+
+.full-date {
+  color: rgb(89, 82, 209);
+}
+
+/* Search Area - SKIP */
+
+.search-container {
   display: flex;
   flex-grow: 1;
   max-width: 600px;
   margin: 0 20px;
 }
 
-.search__input {
+.search-input {
   flex-grow: 1;
   padding: 8px 15px;
   border: 1px solid #444;
@@ -53,7 +66,7 @@ header {
   color: white;
 }
 
-.search__button {
+.search-button {
   background-color: rgb(89, 82, 209);
   color: white;
   border: none;
@@ -67,25 +80,8 @@ header {
   justify-content: center;
 }
 
-.date__display {
-  text-align: right;
-}
+/* Side Bar - SKIP */
 
-.day {
-  font-weight: bold;
-}
-
-.full__date {
-  color: rgb(89, 82, 209);
-}
-
-/* MAIN CONTAINER */
-.container {
-  display: flex;
-  height: calc(100vh - 67px);
-}
-
-/* SIDEBAR */
 .sidebar {
   width: 250px;
   min-width: 250px;
@@ -101,7 +97,7 @@ header {
   margin-bottom: 30px;
 }
 
-.profile__img {
+.profile-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -110,23 +106,23 @@ header {
   border: 3px solid rgb(89, 82, 209);
 }
 
-.profile__img img {
+.profile-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.profile__name {
+.profile-name {
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.profile__email {
+.profile-email {
   font-size: 12px;
   opacity: 0.8;
 }
 
-.sidebar__button {
+.sidebar-button {
   background-color: transparent;
   color: white;
   border: none;
@@ -141,15 +137,21 @@ header {
   align-items: center;
 }
 
-/* MAIN CONTENT */
-.main__content {
+/* Main Container */
+.container {
+  display: flex;
+  height: calc(100vh - 67px);
+}
+
+/* Main Content */
+.main-content {
   flex-grow: 1;
   padding: 20px;
   height: 100%;
   overflow: auto;
 }
 
-.content__section {
+.content-section {
   background-color: rgb(29, 29, 29);
   border-radius: 15px;
   padding: 20px;
@@ -157,20 +159,20 @@ header {
   height: 100%;
 }
 
-.content__header--container {
+.content-header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.content__header {
+.content-header {
   font-size: 24px;
   font-weight: bold;
   position: relative;
 }
 
-.content__header:after {
+.content-header:after {
   content: "";
   display: block;
   width: 130px;
@@ -181,7 +183,7 @@ header {
   left: 0;
 }
 
-.add__item--btn {
+.add-item-btn {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -195,22 +197,19 @@ header {
   font-size: 20px;
 }
 
-.add__item--btn:hover {
+.add-item-btn:hover {
   background-color: rgb(70, 62, 189);
 }
 
-/* VISION BOARD DISPLAY */
-.board__container {
+/* Vision Board Grid */
+.board-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(220px, 1fr)
-  ); /* There will always be room for more board items | width of each card will be 220px with 1 fractical unit */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
   padding: 10px 0;
 }
 
-.board__item {
+.board-item {
   background-color: rgb(42, 42, 42);
   border-radius: 8px;
   overflow: hidden;
@@ -220,23 +219,23 @@ header {
   transition: transform 0.2s;
 }
 
-.board__item:hover {
+.board-item:hover {
   transform: translateY(-5px);
 }
 
-.board__item.blue {
+.board-item.blue {
   border-top: 4px solid #3498db;
 }
 
-.board__item.white {
+.board-item.white {
   border-top: 4px solid rgb(232, 223, 222);
 }
 
-.board__item.purple {
+.board-item.purple {
   border-top: 4px solid rgb(89, 82, 209);
 }
 
-.item__image {
+.item-image {
   width: 100%;
   height: 150px;
   background-color: #1a1a1a;
@@ -245,43 +244,43 @@ header {
   align-items: center;
 }
 
-.item__image img {
+.item-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.item__image--placeholder {
+.item-image-placeholder {
   color: #888;
   font-size: 12px;
   text-align: center;
 }
 
-.item__content {
+.item-content {
   padding: 15px;
   flex-grow: 1;
 }
 
-.item__title {
+.item-title {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
-.item__description {
+.item-description {
   font-size: 14px;
   color: #ddd;
   margin-bottom: 10px;
 }
 
-.action__buttons {
+.action-buttons {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   margin-top: 10px;
 }
 
-.action__btn {
+.action-btn {
   background: none;
   border: none;
   width: 36px;
@@ -293,25 +292,25 @@ header {
   cursor: pointer;
 }
 
-.action__btn.btn-secondary {
+.action-btn.btn-secondary {
   background-color: rgba(89, 82, 209, 0.2);
   color: rgb(89, 82, 209);
 }
 
-.action__btn.btn-primary {
+.action-btn.btn-primary {
   background-color: #e74c3c;
   color: white;
 }
 
-.btn__edit:hover {
+.btn-edit:hover {
   background-color: rgba(89, 82, 209, 0.2);
 }
 
-.btn__delete:hover {
+.btn-delete:hover {
   background-color: rgba(231, 76, 60, 0.2);
 }
 
-/* MODAL */
+/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -319,13 +318,13 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Better to use than color and opacity because opacity changes everything */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
-.modal__content {
+.modal-content {
   background-color: rgb(29, 29, 29);
   width: 90%;
   max-width: 500px;
@@ -334,114 +333,103 @@ header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal__header {
+.modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.modal__header h2 {
+.modal-header h2 {
   font-size: 20px;
-  font-weight: bold; /* h2 is bold by default this is not necessary */ 
+  font-weight: bold;
 }
 
-.close__btn {
-  color: white; /* not required because was defined in body */
-  text-decoration: none; /* because it is a span there is none default */
-  font-weight: 500; /* not required because this is default */
+.close-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
   cursor: pointer;
 }
 
-.form__group {
+.form-group {
   margin-bottom: 20px;
 }
 
-.form__group label {
-  display: block; /* do not have these by default and cannot use margins without it */
+.form-group label {
+  display: block;
   margin-bottom: 8px;
   font-weight: 500;
 }
 
-.form__input,
-.textarea__input {
+.form-input,
+.textarea-input {
   width: 100%;
   padding: 10px;
   border: 1px solid #444;
   border-radius: 5px;
   font-size: 14px;
   background-color: rgb(42, 42, 42);
-  color: white; /* Inputs by default are black so this is necessary */
+  color: white;
 }
 
-.form__input:focus,
-.textarea__input:focus {
-    border-color: rgb(89, 82, 209);
-    outline: none;
-}
-
-.textarea__input {
+.textarea-input {
   height: 100px;
-  resize: none; /* So the user cannot resize the box (can change to vertical or horizontal) */
+  resize: none;
 }
 
-.style__options {
+.style-options {
   display: flex;
-  gap: 50px;
+  gap: 20px;
 }
 
-.style__option {
+.style-option {
   display: flex;
   align-items: center;
   gap: 5px;
-  /* cursor: pointer; If you want it here you will want change color indicators from spans to labels and add an id="" to each input along with a matching for="" in the label*/
+  cursor: pointer;
 }
 
-.style__option input {
-    cursor: pointer;
-}
-
-.style__indicator {
+.style-indicator {
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-.style__indicator.blue {
+.style-indicator.blue {
   background-color: #3498db;
 }
 
-.style__indicator.purple {
-  background-color: #5952d1;
+.style-indicator.white {
+  background-color: rgb(232, 223, 222);
 }
 
-.style__indicator.white {
-  background-color: #e8dfde;
-}
-
-.save__btn {
+.style-indicator.purple {
   background-color: rgb(89, 82, 209);
-  color: white; /* Buttons are black font by default */
+}
+
+.save-btn {
+  background-color: rgb(89, 82, 209);
+  color: white;
   border: none;
   padding: 10px 25px;
   border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
   margin-top: 20px;
-  transition: all 0.2s ease;
 }
 
-.save__btn:hover {
+.save-btn:hover {
   background-color: rgb(70, 62, 189);
 }
 
-.empty__state {
+.empty-state {
   padding: 40px;
   text-align: center;
   color: #aaa;
 }
 
-/* RESPONSIVENESS */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -452,11 +440,11 @@ header {
     padding: 10px;
   }
 
-  .main__content {
+  .main-content {
     padding: 10px;
   }
 
-  .board__container {
+  .board-container {
     grid-template-columns: 1fr;
   }
 }
